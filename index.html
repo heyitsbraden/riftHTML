@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BossFight</title>
+</head>
+
+<body>
+
+<p id="boss"></p>
+<p id="player"></p>
+<script>
+const x = 20; //Boss Health 
+//Use Math.random(); for boss actions
+const y = 20; //Player Health
+const h = 2; //Heal Value
+const d = 2; //Attack Value
+actionHander();
+  function actionHander() {
+document.getElementById("boss").outerHTML = "Boss Health: " + x;
+document.getElementById("player").innerHTML = "Players Health: " + y;
+  }
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<button type="button" onclick="attackHandler()">Attack</button>
+  <script>  
+  function attackHandler() {
+    x = x - d;
+    actionHander();
+  }
+</script>
+<button type="button" onclick="healHandler()">Heal</button>
+<script>
+  function healHandler() {
+    y = y + h;
+    actionHander();
+  }
+</script>
+<p id="text1"></p>
+<p id="text2"></p>
+<p id="text3"></p>
+<p id="text4"></p>
+<p id="text5"></p>
+
+</body>
+</html>
